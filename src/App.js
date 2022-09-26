@@ -30,7 +30,8 @@ function App() {
         dispatch(logout());
       }
     });
-  }, []);
+    // Safe to add dispatch to the dependencies array as  the React hooks lint rules do not know that dispatch should be stable
+  }, [dispatch]);
 
   return (
     <div className="app">
